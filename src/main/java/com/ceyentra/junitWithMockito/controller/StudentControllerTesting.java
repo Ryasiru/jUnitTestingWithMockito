@@ -28,6 +28,7 @@ public class StudentControllerTesting {
         MockHttpServletRequestBuilder accept = MockMvcRequestBuilders.post("").accept(MediaType.APPLICATION_JSON);
         MvcResult mvcResult = mockMvc.perform(accept).andReturn();
 
+
         JSONAssert.assertEquals("{student_id:1,student_name:'Yasiru',student_address: 'Panadura',student_contact: '0710821117'}",mvcResult.getResponse().getContentAsString(),true);
 
 
